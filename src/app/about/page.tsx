@@ -50,7 +50,6 @@ export default function Page() {
           ))}
         </Reveal>
       </section>
-      {/* TODO: placeholder until real founder name/title/bio are provided */}
       <section className="bg-ink py-14 text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-[240px_1fr]">
           <Reveal className="relative mx-auto aspect-square w-48 overflow-hidden rounded-3xl border border-white/10 sm:w-full">
@@ -58,11 +57,12 @@ export default function Page() {
           </Reveal>
           <Reveal delay={150}>
             <p className="text-sm font-semibold uppercase tracking-widest text-brand">Meet the Founder</p>
-            <h2 className="mt-2 text-3xl font-bold">Founder Name</h2>
-            <p className="text-sm text-gray-300">Founder &amp; CEO, {site.name}</p>
+            <h2 className="mt-2 text-3xl font-bold">Sarmesh</h2>
+            <p className="text-sm text-gray-300 mt-2">Founder &amp; CEO, {site.name}</p>
             <p className="mt-4 text-gray-300">
-              [Placeholder bio — share your story: what led you to start {site.name}, and what drives you to help
-              brands grow online.]
+              As a digital creator and growth strategist, I’ve spent years in the trenches testing what truly moves the needle. I’ve seen firsthand how the right mix of organic influence, brand positioning, and aggressive digital execution can turn an unknown startup into a household name.
+
+              Our growth at ZynorTech comes from one core principle: we don’t treat marketing as an expense; we treat it as an engine for enterprise value. When we partner with a brand, we don't just run ads—we dissect their business model, build a distinct market narrative, and unlock fresh distribution channels they never knew existed.
             </p>
             <blockquote className="mt-4 border-l-2 border-brand pl-4 font-serif italic text-gray-200">
               &ldquo;We believe every business deserves great marketing, not just the big ones.&rdquo;

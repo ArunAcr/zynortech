@@ -15,6 +15,7 @@ export const organizationJsonLd = {
     addressCountry: site.address.country,
   },
   areaServed: "IN",
+  sameAs: [site.instagram],
 };
 
 export const faqJsonLd = {

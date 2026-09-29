@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { Play } from "lucide-react";
 import { portfolio, portfolioFilters } from "@/lib/site";
 import Reveal from "@/components/Reveal";
@@ -27,7 +28,7 @@ export default function Portfolio() {
         </Reveal>
         <ul className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-5">
           {items.map((p, i) => (
-            <Reveal key={p.title} as="li" delay={(i % 5) * 80}>
+            <Reveal key={p.slug} as="li" delay={(i % 5) * 80}>
               <a
                 href={p.instagramUrl}
                 target="_blank"
@@ -35,8 +36,18 @@ export default function Portfolio() {
                 aria-label={`Watch ${p.title} on Instagram`}
                 className="group relative block aspect-[4/5] overflow-hidden rounded-lg bg-deep p-3 text-sm text-brand"
               >
-                {/* TODO: swap for the real video thumbnail via next/image */}
-                <span className="relative z-10">{p.tagline}</span>
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    sizes="(min-width: 768px) 20vw, 50vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  // TODO: swap for the real thumbnail once one is available
+                  <span className="relative z-10">{p.tagline}</span>
+                )}
                 <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition group-hover:bg-black/40">
                   <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/90 shadow-lg transition group-hover:scale-110">
                     <Play className="ml-0.5 h-5 w-5 fill-ink text-ink" aria-hidden="true" />

@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { clients } from "@/lib/site";
 
-// See the TODO on the `clients` data — Instagram links are still a
-// placeholder until each client's real URL is available.
-// Repeated (an even number of times) so the track is wide enough to fill the
-// row continuously — too few copies leaves a visible gap before it loops.
 const REPEATS = 8;
 
 export default function ClientLogos() {

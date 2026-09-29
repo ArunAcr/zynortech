@@ -11,6 +11,10 @@ export const site = {
   instagram: "https://www.instagram.com/zynortech_digitalpartner?stkn=ZDg5Mmh3YWQ2MGlp",
 };
 
+export const whatsappUrl = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
+  "Hi! I'd like to know more about your services."
+)}`;
+
 export const nav = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
@@ -103,18 +107,15 @@ export const services = [
 export const portfolioFilters = ["All", "Social Media", "Website Development"];
 
 export const portfolio = [
-  { title: "Beauty Parlour", tagline: "Glow Naturally", category: "Social Media", instagramUrl: site.instagram },
-  { title: "Real Estate", tagline: "Modern Living", category: "Website Development", instagramUrl: site.instagram },
+  { slug: "overlay-1", title: "Zynortech", tagline: "Glow Naturally", category: "Social Media", instagramUrl: site.instagram, image: "/images/overlay_1.png" },
+  { slug: "overlay-2", title: "Zynortech", tagline: "Modern Living", category: "Website Development", instagramUrl: site.instagram, image: "/images/overlay_2.png" },
 ];
 
-// TODO: placeholder client list — swap in real client names, logo images
-// and each client's actual Instagram URL once available.
-// TODO: instagramUrl is a placeholder (the agency profile) for each client —
-// replace with that client's actual Instagram URL once available.
 export const clients = [
-  { name: "Bavin", logo: "/images/bavin_logo.png", instagramUrl: site.instagram },
-  { name: "M&T Miniatures & Toys", logo: "/images/mt_logo.png", instagramUrl: site.instagram },
-  { name: "Vetri Home Appliances", logo: "/images/vetri_logo.jpeg", instagramUrl: site.instagram },
+  { name: "Vetri Home Appliances", logo: "/images/vetri_logo.png", instagramUrl: "https://www.instagram.com/vetrideals?stkn=MW95enNoZmlicnc2aw==" },
+  { name: "Mikado Fitness", logo: "/images/gym_logo.png", instagramUrl: "https://www.instagram.com/mikado_fitness_studio?stkn=MTN1YTJmbjhraGp5dA==2" },
+  { name: "Jaiwin Dairy Products", logo: "/images/bavin_logo.png", instagramUrl: "https://www.instagram.com/bavin_ghee/" },
+  { name: "M&T Miniatures & Toys", logo: "/images/mt_logo.png", instagramUrl: "https://www.instagram.com/miniaturestoy__s/" },
 ];
 
 export const testimonials = [

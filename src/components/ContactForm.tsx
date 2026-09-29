@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiInstagram } from "react-icons/si";
-import { services, site } from "@/lib/site";
+import { services, site, whatsappUrl } from "@/lib/site";
 import Reveal from "@/components/Reveal";
 
 const field =
@@ -114,7 +114,7 @@ export default function ContactForm() {
             <SiInstagram className="h-4 w-4" aria-hidden="true" />
           </a>
           <a
-            href={`https://wa.me/${site.whatsapp}`}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with ZynorTech on WhatsApp"

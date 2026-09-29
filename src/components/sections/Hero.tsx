@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, stats } from "@/lib/site";
+import { site, stats, whatsappUrl } from "@/lib/site";
 import HeroVisual from "@/components/HeroVisual";
 import ClientLogos from "@/components/ClientLogos";
 
@@ -17,7 +17,7 @@ export default function Hero() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="rounded-full bg-brand px-6 py-2.5 font-semibold">Call Now</a>
-            <a href={`https://wa.me/${site.whatsapp}`} className="rounded-full border border-brand px-6 py-2.5 font-semibold">WhatsApp</a>
+            <a href={whatsappUrl} className="rounded-full border border-brand px-6 py-2.5 font-semibold">WhatsApp</a>
             {/* <Link href="/contact" className="rounded-full bg-white px-6 py-2.5 font-semibold text-black">Get Free Consultation</Link> */}
           </div>
           {/* <dl className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">

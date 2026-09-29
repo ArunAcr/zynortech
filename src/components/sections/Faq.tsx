@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Plus, User } from "lucide-react";
 import { faqJsonLd } from "@/lib/jsonld";
-import { faqs, site } from "@/lib/site";
+import { faqs, whatsappUrl } from "@/lib/site";
 import Reveal from "@/components/Reveal";
 
 export default function Faq() {
@@ -26,7 +26,7 @@ export default function Faq() {
               Still have questions? Call with us for 15 min before you decide.
             </p>
             <a
-              href={`https://wa.me/${site.whatsapp}`}
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 block rounded-full bg-brand py-2.5 text-center text-sm font-semibold text-white hover:bg-brand-dark"
