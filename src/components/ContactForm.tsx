@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiInstagram } from "react-icons/si";
 import { services, site } from "@/lib/site";
+import Reveal from "@/components/Reveal";
 
 const field =
   "mt-1 w-full rounded-lg border px-3 py-2.5 text-sm placeholder:text-gray-400 focus:border-brand focus:outline-none";
@@ -65,7 +66,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="mx-auto flex max-w-6xl flex-col overflow-hidden rounded-2xl shadow-xl md:flex-row">
+    <Reveal as="section" className="mx-auto flex max-w-6xl flex-col overflow-hidden rounded-2xl shadow-xl md:flex-row">
       {/* Left panel */}
       <div className="bg-brand p-8 text-white sm:p-10 md:w-[340px] md:shrink-0">
         <h2 className="text-2xl font-bold">Get in touch</h2>
@@ -207,6 +208,6 @@ export default function ContactForm() {
           )}
         </form>
       </div>
-    </section>
+    </Reveal>
   );
 }

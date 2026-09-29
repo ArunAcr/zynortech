@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Plus, User } from "lucide-react";
 import { faqJsonLd } from "@/lib/jsonld";
 import { faqs, site } from "@/lib/site";
+import Reveal from "@/components/Reveal";
 
 export default function Faq() {
   const [open, setOpen] = useState(0);
@@ -10,7 +11,7 @@ export default function Faq() {
   return (
     <section className="bg-gray-50 py-14">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[minmax(0,320px)_1fr] lg:items-start">
-        <div>
+        <Reveal>
           <p className="flex items-center gap-2 text-sm font-semibold text-brand">
             <span className="h-2 w-2 rounded-full bg-brand" aria-hidden="true" /> FAQs
           </p>
@@ -33,13 +34,13 @@ export default function Faq() {
               Book a Free Call
             </a>
           </div>
-        </div>
+        </Reveal>
 
         <div className="space-y-3">
           {faqs.map((f, i) => {
             const isOpen = i === open;
             return (
-              <div key={f.q} className="rounded-xl border bg-white p-5 shadow-sm">
+              <Reveal key={f.q} delay={i * 80} className="rounded-xl border bg-white p-5 shadow-sm">
                 <button
                   onClick={() => setOpen(isOpen ? -1 : i)}
                   aria-expanded={isOpen}
@@ -52,7 +53,7 @@ export default function Faq() {
                   />
                 </button>
                 {isOpen && <p className="mt-3 text-sm text-gray-600">{f.a}</p>}
-              </div>
+              </Reveal>
             );
           })}
         </div>

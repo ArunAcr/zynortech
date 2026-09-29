@@ -107,6 +107,16 @@ export const portfolio = [
   { title: "Real Estate", tagline: "Modern Living", category: "Website Development", instagramUrl: site.instagram },
 ];
 
+// TODO: placeholder client list — swap in real client names, logo images
+// and each client's actual Instagram URL once available.
+// TODO: instagramUrl is a placeholder (the agency profile) for each client —
+// replace with that client's actual Instagram URL once available.
+export const clients = [
+  { name: "Bavin", logo: "/images/bavin_logo.png", instagramUrl: site.instagram },
+  { name: "M&T Miniatures & Toys", logo: "/images/mt_logo.png", instagramUrl: site.instagram },
+  { name: "Vetri Home Appliances", logo: "/images/vetri_logo.jpeg", instagramUrl: site.instagram },
+];
+
 export const testimonials = [
   { quote: "Zynortech transformed our online presence. Leads and sales increased drastically!", name: "Priya Sharma", role: "Beauty Parlour" },
   { quote: "Their content and ad strategies are top-notch. Highly recommended!", name: "Aravind Kumar", role: "Jewellery Shop" },

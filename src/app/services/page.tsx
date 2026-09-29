@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import ServiceIcon from "@/components/ServiceIcon";
 import ServiceCategoryNav from "@/components/ServiceCategoryNav";
+import Reveal from "@/components/Reveal";
 import OurProcess from "@/components/sections/OurProcess";
 import Faq from "@/components/sections/Faq";
 import CtaStrip from "@/components/sections/CtaStrip";
@@ -47,11 +48,18 @@ export default function Page() {
       {groups.map((g) => (
         <section key={g.id} id={g.id} className={`scroll-mt-32 py-14 ${g.bg}`}>
           <div className="mx-auto max-w-7xl px-4">
-            <h2 className="text-2xl font-bold">{g.label}</h2>
-            <p className="mt-2 text-sm text-gray-600">{g.blurb}</p>
+            <Reveal>
+              <h2 className="text-2xl font-bold">{g.label}</h2>
+              <p className="mt-2 text-sm text-gray-600">{g.blurb}</p>
+            </Reveal>
             <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {services.filter((s) => s.category === g.id).map((s) => (
-                <li key={s.slug} className="flex flex-col rounded-2xl border border-gray-100 p-6 shadow-sm transition hover:border-brand hover:shadow-md">
+              {services.filter((s) => s.category === g.id).map((s, i) => (
+                <Reveal
+                  key={s.slug}
+                  as="li"
+                  delay={(i % 3) * 80}
+                  className="flex flex-col rounded-2xl border border-gray-100 p-6 shadow-sm transition hover:border-brand hover:shadow-md"
+                >
                   <ServiceIcon title={s.title} size="lg" />
                   <h3 className="mt-4 text-lg font-semibold">{s.title}</h3>
                   <p className="mt-2 text-sm text-gray-600">{s.text}</p>
@@ -68,7 +76,7 @@ export default function Page() {
                   >
                     Learn more <ArrowRight className="h-4 w-4 transition-all" aria-hidden="true" />
                   </Link>
-                </li>
+                </Reveal>
               ))}
             </ul>
           </div>

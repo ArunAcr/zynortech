@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
 import { portfolio, portfolioFilters } from "@/lib/site";
+import Reveal from "@/components/Reveal";
 
 export default function Portfolio() {
   const [active, setActive] = useState("All");
@@ -9,22 +10,24 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="bg-ink py-12 text-white">
       <div className="mx-auto max-w-7xl px-4">
-        <h2 className="text-center text-3xl font-bold">Our Portfolio</h2>
-        <div className="mt-5 flex flex-wrap justify-center gap-2" role="tablist">
-          {portfolioFilters.map((f) => (
-            <button
-              key={f}
-              onClick={() => setActive(f)}
-              aria-pressed={active === f}
-              className={`rounded-full border px-4 py-1 text-xs ${active === f ? "border-brand bg-brand" : "border-brand/50"}`}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
+        <Reveal>
+          <h2 className="text-center text-3xl font-bold">Our Portfolio</h2>
+          <div className="mt-5 flex flex-wrap justify-center gap-2" role="tablist">
+            {portfolioFilters.map((f) => (
+              <button
+                key={f}
+                onClick={() => setActive(f)}
+                aria-pressed={active === f}
+                className={`rounded-full border px-4 py-1 text-xs ${active === f ? "border-brand bg-brand" : "border-brand/50"}`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+        </Reveal>
         <ul className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-5">
-          {items.map((p) => (
-            <li key={p.title}>
+          {items.map((p, i) => (
+            <Reveal key={p.title} as="li" delay={(i % 5) * 80}>
               <a
                 href={p.instagramUrl}
                 target="_blank"
@@ -41,7 +44,7 @@ export default function Portfolio() {
                 </span>
               </a>
               <p className="mt-2 text-center text-xs">{p.title}</p>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>

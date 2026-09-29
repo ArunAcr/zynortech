@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Eye, Handshake, Lightbulb, Mail, Target, type LucideIcon } from "lucide-react";
 import { SiInstagram } from "react-icons/si";
 import PageHeader from "@/components/PageHeader";
+import Reveal from "@/components/Reveal";
 import Faq from "@/components/sections/Faq";
 import CtaStrip from "@/components/sections/CtaStrip";
 import WhyUs from "@/components/sections/WhyUs";
@@ -27,7 +28,7 @@ export default function Page() {
     <>
       <PageHeader title="About ZynorTech" subtitle="A digital marketing agency helping local brands grow online." />
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2">
-        <div>
+        <Reveal>
           <h2 className="text-2xl font-bold">Who we are</h2>
           <p className="mt-3 text-gray-600">
             {site.name} is a digital marketing agency based in {site.address.locality}. We combine content, ads,
@@ -39,23 +40,23 @@ export default function Page() {
           <Link href="/contact" className="mt-6 inline-block rounded-full bg-brand px-6 py-2.5 font-semibold text-white">
             Work With Us
           </Link>
-        </div>
-        <dl className="grid grid-cols-2 gap-4">
+        </Reveal>
+        <Reveal delay={150} as="dl" className="grid grid-cols-2 gap-4">
           {stats.map((s) => (
             <div key={s.label} className="rounded-xl border p-6 text-center">
               <dd className="text-3xl font-bold text-brand">{s.value}</dd>
               <dt className="mt-1 text-sm text-gray-600">{s.label}</dt>
             </div>
           ))}
-        </dl>
+        </Reveal>
       </section>
       {/* TODO: placeholder until real founder name/title/bio are provided */}
       <section className="bg-ink py-14 text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-[240px_1fr]">
-          <div className="relative mx-auto aspect-square w-48 overflow-hidden rounded-3xl border border-white/10 sm:w-full">
+          <Reveal className="relative mx-auto aspect-square w-48 overflow-hidden rounded-3xl border border-white/10 sm:w-full">
             <Image src="/images/founder_img.png" alt="Founder of ZynorTech" fill className="object-cover" />
-          </div>
-          <div>
+          </Reveal>
+          <Reveal delay={150}>
             <p className="text-sm font-semibold uppercase tracking-widest text-brand">Meet the Founder</p>
             <h2 className="mt-2 text-3xl font-bold">Founder Name</h2>
             <p className="text-sm text-gray-300">Founder &amp; CEO, {site.name}</p>
@@ -84,12 +85,12 @@ export default function Page() {
                 <Mail className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
       <section className="bg-gray-50 py-14">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-2">
-          <div>
+          <Reveal>
             <h2 className="text-2xl font-bold">Our Values</h2>
             <p className="mt-2 text-sm text-gray-600">The principles that guide every project we take on.</p>
             <ul className="mt-8 divide-y divide-gray-200 border-y border-gray-200">
@@ -111,9 +112,9 @@ export default function Page() {
                 );
               })}
             </ul>
-          </div>
+          </Reveal>
 
-          <div className="rounded-2xl bg-white p-8 shadow-sm lg:mt-16">
+          <Reveal delay={150} className="rounded-2xl bg-white p-8 shadow-sm lg:mt-16">
             <h3 className="text-xl font-bold">Built Around Your Growth</h3>
             <p className="mt-3 text-gray-600">
               {site.name} started with a simple idea: growing brands shouldn&apos;t need to juggle five different
@@ -132,7 +133,7 @@ export default function Page() {
             <Link href="/contact" className="mt-6 inline-block rounded-full bg-brand px-6 py-2.5 text-sm font-semibold text-white">
               Get to Know Us
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
       <WhyUs />

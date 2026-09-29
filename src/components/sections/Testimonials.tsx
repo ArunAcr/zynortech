@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Quote } from "lucide-react";
 import { testimonials } from "@/lib/site";
+import Reveal from "@/components/Reveal";
 
 const AUTOPLAY_MS = 4000;
 
@@ -25,16 +26,15 @@ export default function Testimonials() {
 
   return (
     <section className="relative overflow-hidden bg-gray-50 py-16">
-      <div className="relative mx-auto max-w-2xl px-4 text-center">
+      <Reveal className="relative mx-auto max-w-2xl px-4 text-center">
         <h2 className="text-3xl font-bold">What People Say</h2>
         <p className="mt-4 text-sm text-gray-600 spacing-4">
           Discover what our satisfied clients have to <span className="block">say about their experience working with us.</span>
         </p>
-      </div>
+      </Reveal>
 
-      
-
-      <div
+      <Reveal
+        delay={150}
         className="relative mx-auto mt-10 max-w-4xl rounded-2xl bg-white px-8 py-10 shadow-xl sm:px-10"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
@@ -84,7 +84,7 @@ export default function Testimonials() {
             <p className="mt-4 text-sm text-gray-500">{current.role}</p>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
