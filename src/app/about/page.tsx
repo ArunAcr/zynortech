@@ -8,6 +8,7 @@ import Reveal from "@/components/Reveal";
 import Faq from "@/components/sections/Faq";
 import CtaStrip from "@/components/sections/CtaStrip";
 import WhyUs from "@/components/sections/WhyUs";
+// import Team from "@/components/sections/Team";
 import { site, stats, values } from "@/lib/site";
 
 const valueIcons: Record<string, LucideIcon> = {
@@ -62,7 +63,7 @@ export default function Page() {
             <p className="mt-4 text-gray-300">
               As a digital creator and growth strategist, I’ve spent years in the trenches testing what truly moves the needle. I’ve seen firsthand how the right mix of organic influence, brand positioning, and aggressive digital execution can turn an unknown startup into a household name.
 
-              Our growth at ZynorTech comes from one core principle: we don’t treat marketing as an expense; we treat it as an engine for enterprise value. When we partner with a brand, we don't just run ads—we dissect their business model, build a distinct market narrative, and unlock fresh distribution channels they never knew existed.
+              Our growth at ZynorTech comes from one core principle: we don’t treat marketing as an expense; we treat it as an engine for enterprise value. When we partner with a brand, we don&rsquo;t just run ads—we dissect their business model, build a distinct market narrative, and unlock fresh distribution channels they never knew existed.
             </p>
             <blockquote className="mt-4 border-l-2 border-brand pl-4 font-serif italic text-gray-200">
               &ldquo;We believe every business deserves great marketing, not just the big ones.&rdquo;
@@ -88,6 +89,7 @@ export default function Page() {
           </Reveal>
         </div>
       </section>
+      {/* <Team /> */}
       <section className="bg-gray-50 py-14">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-2">
           <Reveal>

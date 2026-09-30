@@ -147,6 +147,23 @@ export const faqs = [
   { q: "Do you provide content & images?", a: "Yes. We handle shoots, video editing, graphic design and copywriting end to end." },
 ];
 
+// TODO: placeholder team — swap in real names, designations, bios and
+// photos (set `image` to a /images/... path) once available.
+export const team = [
+  {
+    name: "Team Member", role: "Designation", image: null,
+    bio: "[Placeholder bio — a couple of sentences on this person's role, experience and what they focus on at ZynorTech.]",
+  },
+  {
+    name: "Team Member", role: "Designation", image: null,
+    bio: "[Placeholder bio — a couple of sentences on this person's role, experience and what they focus on at ZynorTech.]",
+  },
+  {
+    name: "Team Member", role: "Designation", image: null,
+    bio: "[Placeholder bio — a couple of sentences on this person's role, experience and what they focus on at ZynorTech.]",
+  },
+];
+
 export const values = [
   { title: "Results First", text: "Every plan is tied to leads, sales or enquiries, not vanity numbers." },
   { title: "Transparent", text: "Clear reporting and honest advice, with no hidden work." },
