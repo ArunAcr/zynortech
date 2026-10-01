@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 import Faq from "@/components/sections/Faq";
 import CtaStrip from "@/components/sections/CtaStrip";
 import WhyUs from "@/components/sections/WhyUs";
-// import Team from "@/components/sections/Team";
+import Team from "@/components/sections/Team";
 import { site, stats, values } from "@/lib/site";
 
 const valueIcons: Record<string, LucideIcon> = {
@@ -54,7 +54,13 @@ export default function Page() {
       <section className="bg-ink py-14 text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-[240px_1fr]">
           <Reveal className="relative mx-auto aspect-square w-48 overflow-hidden rounded-3xl border border-white/10 sm:w-full">
-            <Image src="/images/founder_img.png" alt="Founder of ZynorTech" fill className="object-cover" />
+            <Image
+              src="/images/founder_img.png"
+              alt="Founder of ZynorTech"
+              fill
+              sizes="(min-width: 768px) 240px, (min-width: 640px) 50vw, 192px"
+              className="object-cover"
+            />
           </Reveal>
           <Reveal delay={150}>
             <p className="text-sm font-semibold uppercase tracking-widest text-brand">Meet the Founder</p>
@@ -89,7 +95,7 @@ export default function Page() {
           </Reveal>
         </div>
       </section>
-      {/* <Team /> */}
+      <Team />
       <section className="bg-gray-50 py-14">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-2">
           <Reveal>

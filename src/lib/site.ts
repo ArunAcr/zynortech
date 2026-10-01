@@ -149,19 +149,21 @@ export const faqs = [
 
 // TODO: placeholder team — swap in real names, designations, bios and
 // photos (set `image` to a /images/... path) once available.
+export const teamCategories = ["Media Team", "Tech Team"] as const;
+
 export const team = [
-  {
-    name: "Team Member", role: "Designation", image: null,
-    bio: "[Placeholder bio — a couple of sentences on this person's role, experience and what they focus on at ZynorTech.]",
-  },
-  {
-    name: "Team Member", role: "Designation", image: null,
-    bio: "[Placeholder bio — a couple of sentences on this person's role, experience and what they focus on at ZynorTech.]",
-  },
-  {
-    name: "Team Member", role: "Designation", image: null,
-    bio: "[Placeholder bio — a couple of sentences on this person's role, experience and what they focus on at ZynorTech.]",
-  },
+  { name: "Ajithkumar M", role: "Admin / Social Media", image: "/team/ajith.png", category: "Media Team" },
+  { name: "Suriya M", role: "Video Editor", image: "/team/surya.png", category: "Media Team" },
+  { name: "Harini S", role: "Sales Management", image: "/team/harini.png", category: "Media Team" },
+  { name: "Dhurai Arasan P", role: "Director of Photography", image: "/team/durai.jpg", category: "Media Team" },
+  { name: "Jeeva V", role: "Video Editor", image: "/team/jeeva.jpg", category: "Media Team" },
+  { name: "Prasanth", role: "Video Editor", image: "/team/prasanth.png", category: "Media Team" },
+  { name: "Sanjeev J", role: "Manager & D.O.P", image: "/team/sanjeev.png", category: "Media Team" },
+  { name: "Anbu R", role: "Director of Photography", image: "/team/anbu.png", category: "Media Team" },
+  { name: "Vanish", role: "Director of Photography", image: "/team/vanish.png", category: "Media Team" },
+  { name: "Arunkumar A", role: "Full Stack Developer", image: "/team/arun.png", category: "Tech Team" },
+  { name: "Altaf M", role: "Mobile App Developer", image: "/team/altaf.png", category: "Tech Team" },
+  { name: "Saravanan S", role: "Performance Marketing Specialist", image: "/team/saravana.png", category: "Tech Team" },
 ];
 
 export const values = [
